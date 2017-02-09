@@ -87,8 +87,6 @@ public class TabbedMenuWidget extends Widget {
 
 	@Override
 	public void keyTyped(int keyCode) {
-		Huzuni.INSTANCE.LOGGER.info("Keycode Tab Hit: " + keyCode);
-		
         Tab tab = getSelectedTab();
         if (tab.isExpanded()) {
             switch (keyCode) {

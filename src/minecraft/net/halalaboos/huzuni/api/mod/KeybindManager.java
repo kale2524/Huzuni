@@ -30,7 +30,6 @@ public final class KeybindManager {
 	}
 	
 	public void addKeybind(Keybind keybind) {
-		Huzuni.INSTANCE.LOGGER.info("Keybind added.");
 		this.keybinds.add(keybind);
 	}
 	
