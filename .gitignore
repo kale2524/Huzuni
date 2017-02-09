@@ -1,0 +1,14 @@
+/bin
+/conf
+/docs
+/eclipse
+/jars
+/lib
+/logs
+/mappingviewer
+/reobf
+/runtime
+/temp
+/src/minecraft/mcp
+/src/minecraft/Start.java
+/src/minecraft/net/minecraft
