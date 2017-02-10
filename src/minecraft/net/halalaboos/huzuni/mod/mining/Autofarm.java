@@ -111,7 +111,7 @@ public final class Autofarm extends BasicMod {
 	};
 
 	public Autofarm() {
-		super("Auto farm", "Harvest/plant crops automagically");
+		super("Auto farm", "Harvest/plant crops automatically");
 		this.addChildren(radius, mineDelay, placeDelay, distanceCheck, silent, mode);
 		this.setCategory(Category.MINING);
 		silent.setEnabled(true);
