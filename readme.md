@@ -1,8 +1,8 @@
 # Huzuni
 ## About
-Huzuni was originally developed by Hal (halalaboos). Hal decided stop working on Huzuni on Minecraft version 1.10, he then open sourced the client on BitBucket. People have been asking for Huzuni to be updated for the past few months, especially in the WiZARDHAX Discord. So we've discussed it, and I've went ahead and clone Hal's BitBucket repo, and got to work on the 1.11.2 update. 
+Huzuni was originally developed by Hal (halalaboos). Hal decided stop working on Huzuni on Minecraft version 1.10, he then open sourced the client on BitBucket. People have been asking for Huzuni to be updated for the past few months, especially in the WiZARDHAX Discord. So we've discussed it, and I've went ahead and cloned Hal's BitBucket repo, and got to work on the 1.11.2 update. 
 
-The version that's currently available isn't very stable either, some of the features don't even work. So I've taken up the burden onto my shoulders to help contribute to this project and update it. At some point I would like to do a fully "Huzuni Remastered" to bring back some of the old UI that, in my opinion, was better, with the side bar option as a keybind. However, that would be a full rewrite, and I may never get to that.
+The version that's currently available (Hal's 1.10.2) isn't very stable either, some of the features don't even work. So I've taken up the burden onto my shoulders to help contribute to this project and update it. At some point I would like to do a fully "Huzuni Remastered" to bring back some of the old UI that, in my opinion, was better, with the side bar option as a keybind. However that would be a full rewrite, and I may never get to that.
 
 ## Versions/Downloads
 ### Please note that when I update major versions that I will only be working on that version, I will only update earlier versions for hotfixes, or issues. No new features will be implemented.
