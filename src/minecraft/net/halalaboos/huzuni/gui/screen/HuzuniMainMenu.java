@@ -33,7 +33,7 @@ public class HuzuniMainMenu extends HuzuniScreen {
 		this.buttonList.add(new GuiButton(1, this.width / 2 - 100, y, I18n.format("menu.singleplayer", new Object[0])));
         this.buttonList.add(new GuiButton(2, this.width / 2 - 100, y + 24 * 1, I18n.format("menu.multiplayer", new Object[0])));
         GuiButton pluginButton = new GuiButton(7, this.width / 2 + 2, y + 24 * 2, 98, 20, "Plugins");
-        // pluginButton.enabled = false;
+        pluginButton.enabled = false;
         this.buttonList.add(pluginButton);
         this.buttonList.add(new GuiButton(3, this.width / 2 - 100, y + 24 * 2, 98, 20, "Accounts"));
 
@@ -72,7 +72,7 @@ public class HuzuniMainMenu extends HuzuniScreen {
 		}
 		if (button.id == 6) {
 	        try {
-				Desktop.getDesktop().browse(new URL("http://halalaboos.net/huzuni.html").toURI());
+				Desktop.getDesktop().browse(new URL("https://github.com/MatthewSH/minecraft-Huzuni/releases").toURI());
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}

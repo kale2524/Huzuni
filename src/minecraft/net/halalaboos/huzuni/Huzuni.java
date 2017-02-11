@@ -39,12 +39,15 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 
 /**
- * Minecraft.java - Line 596
+ * Minecraft.java - Line 596, Line 2018, Line 2557
+ * EntityRenderer.java - Line 1491
+ * GuiIngame.java - Line 373
+ * NetworkManager.java - Line 157, Line 183
  * */
 public enum Huzuni {
 	INSTANCE;
 	
-	public static final String VERSION = "Huzuni Dev 16", MCVERSION = "1.10.2";
+	public static final String VERSION = "Huzuni 1.0.0-beta1", MCVERSION = "1.11.2";
 	
 	public static final Logger LOGGER = LogManager.getLogger("Huzuni");
 	

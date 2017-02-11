@@ -237,15 +237,13 @@ public class Killaura extends BasicMod implements Renderer {
 		randomizedSpeed = random.nextFloat();
         randomizedStrength = random.nextFloat();
 	}
-	
-	// TODO: Fix commented code.
+
 	private void attackEntity() {
 		float cooldown = mc.player.getCooledAttackStrength(0.0F);
 		if (timer.hasReach((int) (1000F / (getAttackSpeed()))) && (cooldown >= getAttackStrength() || calculateSmartAttack())) {
 			if (this.randomMisses.isEnabled()) {
 				if (random.nextFloat() > missChance) {
 					if (interact.isEnabled())
-						//mc.playerController.interactWithEntity(mc.player, entity, mc.player.getHeldItemMainhand(), EnumHand.MAIN_HAND);
 						mc.playerController.interactWithEntity(mc.player, entity, EnumHand.MAIN_HAND);
 					else
 						mc.playerController.attackEntity(mc.player, entity);
@@ -255,7 +253,6 @@ public class Killaura extends BasicMod implements Renderer {
 					hitOrMiss = "Miss";
 			} else {
 				if (interact.isEnabled())
-					//mc.playerController.interactWithEntity(mc.player, entity, mc.player.getHeldItemMainhand(), EnumHand.MAIN_HAND);
 					mc.playerController.interactWithEntity(mc.player, entity, EnumHand.MAIN_HAND);
 				else
 					mc.playerController.attackEntity(mc.player, entity);

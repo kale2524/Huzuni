@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.MoverType;
 import net.minecraft.stats.StatisticsManager;
 import net.minecraft.world.World;
 
@@ -32,13 +33,13 @@ public class HuzuniEntityClient extends EntityPlayerSP {
 		super.onUpdate();
 	}
 	
-	// TODO: Fix this.
-	public void moveEntity(double x, double y, double z) {
+	@Override
+	public void move(MoverType type, double x, double y, double z) {
 		playerMoveEvent.setMotionX(x);
 		playerMoveEvent.setMotionY(y);
 		playerMoveEvent.setMotionZ(z);
 		huzuni.eventManager.invoke(playerMoveEvent);
-		//super.moveEntity(playerMoveEvent.getMotionX(), playerMoveEvent.getMotionY(), playerMoveEvent.getMotionZ());
+		super.move(type, playerMoveEvent.getMotionX(), playerMoveEvent.getMotionY(), playerMoveEvent.getMotionZ());
 	}
 
 	@Override

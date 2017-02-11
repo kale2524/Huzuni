@@ -48,7 +48,7 @@ public final class HuzuniSettings extends JsonFileHandler {
 		
 	private Session lastSession = null;
 	
-	private String newestVersion = "";
+	private String newestVersion = "Huzuni GitHub Releases";
 		
 	public HuzuniSettings(Huzuni huzuni) {
 		super(huzuni, null);
