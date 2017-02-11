@@ -6,10 +6,9 @@ The version that's currently available isn't very stable either, some of the fea
 
 ## Versions/Downloads
 ### Please note that when I update major versions that I will only be working on that version, I will only update earlier versions for hotfixes, or issues. No new features will be implemented.
-
-| Huzuni Version | Minecraft Version(s) | Release Page                  | Download Link                 |
-|----------------|----------------------|-------------------------------|-------------------------------|
-| 1.0.0-beta1    | 1.11.2               | [Release Info](http://google) | [Download](http://google.com) |
+| Huzuni Version | Minecraft Version(s) | Release Page                                                                            | Download Link                    |
+|----------------|----------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| 1.0.0-beta1    | 1.11.2               | [Release Info](https://github.com/MatthewSH/minecraft-Huzuni/releases/tag/v1.0.0-beta1) | [Download](http://adf.ly/1jemlh) |
 
 ## Donate
 Feel free to donate to help keep the updates coming (it does take time to update these clients and any donation helps). If you want to include your Minecraft IGN in the comments, when I do a custom cape (via [Capes API](http://capesapi.com)), I'll give it to you.
@@ -17,6 +16,6 @@ Feel free to donate to help keep the updates coming (it does take time to update
 [![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/A384KSB)
 
 ## To Do
-- Update to 1.11.2
+- ~Update to 1.11.2~
 - Saving the configuration (for some reason Hal never did it?)
-- Adding CapesAPI integration
+- ~Adding CapesAPI integration~
