@@ -13,6 +13,7 @@ The version that's currently available isn't very stable either, some of the fea
 
 ## Donate
 Feel free to donate to help keep the updates coming (it does take time to update these clients and any donation helps). If you want to include your Minecraft IGN in the comments, when I do a custom cape (via [Capes API](http://capesapi.com)), I'll give it to you.
+
 [![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/A384KSB)
 
 ## To Do
