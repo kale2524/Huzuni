@@ -17,7 +17,7 @@ Downloads will be available [here](https://github.com/MatthewSH/minecraft-Huzuni
 ## Donate
 Donations would be very much appriciated to help keep things going to pay back my time. If you want to include your Minecraft IGN in the comments, if I ever decide to do a custom cape (via [Capes API](http://capesapi.com)) then I'll give you a cape.
 
-[![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/636QU7F12V5F)
+[![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/A384KSB)
 
 ## To Do
 - Update to 1.11.2
