@@ -16,6 +16,6 @@ Feel free to donate to help keep the updates coming (it does take time to update
 [![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/A384KSB)
 
 ## To Do
-- ~Update to 1.11.2~
+- ~~Update to 1.11.2~~
 - Saving the configuration (for some reason Hal never did it?)
-- ~Adding CapesAPI integration~
+- ~~Adding CapesAPI integration~~
