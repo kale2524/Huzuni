@@ -15,7 +15,7 @@ public class HuzuniLink extends GuiButton {
             this.hovered = mouseX >= this.xPosition && mouseY >= this.yPosition && mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height;
             this.mouseDragged(mc, mouseX, mouseY);
             
-            this.drawCenteredString(mc.fontRenderer, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, hovered ? 16777120 : 0xFFFFFF);
+            this.drawCenteredString(mc.fontRendererObj, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, hovered ? 16777120 : 0xFFFFFF);
         }
     }
 	

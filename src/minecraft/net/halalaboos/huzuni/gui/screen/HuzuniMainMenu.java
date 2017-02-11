@@ -41,7 +41,7 @@ public class HuzuniMainMenu extends HuzuniScreen {
         this.buttonList.add(new GuiButton(4, this.width / 2 + 2, y + 72, 98, 20, I18n.format("menu.quit", new Object[0])));
         this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, y + 72));
         if (huzuni.settings.hasUpdate()) {
-        	this.buttonList.add(new HuzuniLink(6, this.width / 2 - mc.fontRenderer.getStringWidth(huzuni.settings.getNewestVersion()) / 2, y + 102, mc.fontRenderer.getStringWidth(huzuni.settings.getNewestVersion()), 15, huzuni.settings.getNewestVersion()));
+        	this.buttonList.add(new HuzuniLink(6, this.width / 2 - mc.fontRendererObj.getStringWidth(huzuni.settings.getNewestVersion()) / 2, y + 102, mc.fontRendererObj.getStringWidth(huzuni.settings.getNewestVersion()), 15, huzuni.settings.getNewestVersion()));
         }
 	}
 
@@ -108,8 +108,8 @@ public class HuzuniMainMenu extends HuzuniScreen {
 		float titleX = width / 2 - 150, titleY = 20;
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		TITLE.render(titleX, titleY + 10, 300, 100);
-        this.drawString(fontRenderer, Huzuni.VERSION, width - fontRenderer.getStringWidth(Huzuni.VERSION) - 2, height - 12, 0xFFFFFF);
+        this.drawString(fontRendererObj, Huzuni.VERSION, width - fontRendererObj.getStringWidth(Huzuni.VERSION) - 2, height - 12, 0xFFFFFF);
         if (huzuni.settings.hasUpdate())
-            this.drawCenteredString(fontRenderer, "New version available!", width / 2, height / 4 + 142, 0xFFFFFF);
+            this.drawCenteredString(fontRendererObj, "New version available!", width / 2, height / 4 + 142, 0xFFFFFF);
 	}
 }

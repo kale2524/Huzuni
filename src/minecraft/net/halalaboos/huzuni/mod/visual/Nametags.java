@@ -95,7 +95,7 @@ public class Nametags extends BasicMod implements Renderer {
 			scale = 1D;
 		
 		String text = (huzuni.friendManager.isFriend(entity.getName()) ? huzuni.friendManager.getAlias(entity.getName()) : entity.getDisplayName().getFormattedText()) + getHealth(entity) + (entity.isInvisibleToPlayer(mc.player) ? TextFormatting.BLUE + " [Invisible]" : "") + getPing(entity);
-        int width = mc.fontRenderer.getStringWidth(text);
+        int width = mc.fontRendererObj.getStringWidth(text);
 		GlStateManager.pushMatrix();
 		RenderUtils.prepareBillboarding((float) x, (float) y + entity.height + 0.5F, (float) z, true);
 		GlStateManager.scale(scale, scale, scale);
@@ -108,7 +108,7 @@ public class Nametags extends BasicMod implements Renderer {
         if (healthMode.getSelected() == 1)
 			renderHealth(entity);
         
-		mc.fontRenderer.drawStringWithShadow(text, -width / 2, 0, color);
+		mc.fontRendererObj.drawStringWithShadow(text, -width / 2, 0, color);
 		
 		GL11.glPolygonOffset(1.0F, -2000000.0F);
 		GlStateManager.enablePolygonOffset();
@@ -215,7 +215,7 @@ public class Nametags extends BasicMod implements Renderer {
 				GlStateManager.pushMatrix();
 				GlStateManager.scale(scale, scale, scale);
 				if (compound != null && Enchantment.getEnchantmentByID(compound.getByte("id")) != null)
-					mc.fontRenderer.drawStringWithShadow(Enchantment.getEnchantmentByID(compound.getByte("id")).getTranslatedName(compound.getByte("lvl")).substring(0, 4) + " " + compound.getByte("lvl"), x * scaleInverse, ((int) y + (increment * j)) * scaleInverse, 0xFFFFFF);
+					mc.fontRendererObj.drawStringWithShadow(Enchantment.getEnchantmentByID(compound.getByte("id")).getTranslatedName(compound.getByte("lvl")).substring(0, 4) + " " + compound.getByte("lvl"), x * scaleInverse, ((int) y + (increment * j)) * scaleInverse, 0xFFFFFF);
 				GlStateManager.popMatrix();
 			}
 		}

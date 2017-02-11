@@ -74,7 +74,7 @@ public class ESP extends BasicMod implements Renderer {
 				continue;
 			// TODO: Fix this...possibly wrong (quick fix, not really trying).
 			//int entityId = EntityList.getEntityID(entity);
-			int entityId = EntityList.REGISTRY.getIDForObject(entity.getClass());
+			//int entityId = EntityList.REGISTRY.getIDForObject(entity.getClass());
 			float renderX = (float) (MathUtils.interpolate(entity.prevPosX, entity.posX, partialTicks) - mc.getRenderManager().viewerPosX);
 			float renderY = (float) (MathUtils.interpolate(entity.prevPosY, entity.posY, partialTicks) - mc.getRenderManager().viewerPosY);
 			float renderZ = (float) (MathUtils.interpolate(entity.prevPosZ, entity.posZ, partialTicks) - mc.getRenderManager().viewerPosZ);
@@ -88,8 +88,8 @@ public class ESP extends BasicMod implements Renderer {
 				GlStateManager.pushMatrix();
 				GlStateManager.translate(renderX, renderY, renderZ);
 				GlStateManager.rotate(-entity.rotationYaw, 0F, 1F, 0F);
-				generateVbo(entity, entityId);
-				box[entityId].render();
+				//generateVbo(entity, entityId);
+				//box[entityId].render();
 				GlStateManager.popMatrix();
 			} else if (mode.getSelected() == 2) {
 				GlStateManager.pushMatrix();

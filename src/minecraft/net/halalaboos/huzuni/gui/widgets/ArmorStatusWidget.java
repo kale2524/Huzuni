@@ -82,7 +82,7 @@ public class ArmorStatusWidget extends BackgroundWidget {
         	GlStateManager.translate(0.0F, 0.0F, 32.0F);
         	mc.getRenderItem().zLevel = 200F;
 			mc.getRenderItem().renderItemAndEffectIntoGUI(itemStack, x, y);
-        	mc.getRenderItem().renderItemOverlayIntoGUI(mc.fontRenderer, itemStack, x, y, "");
+        	mc.getRenderItem().renderItemOverlayIntoGUI(mc.fontRendererObj, itemStack, x, y, "");
         	mc.getRenderItem().zLevel = 0F;
         } catch (Exception e) {
         	e.printStackTrace();

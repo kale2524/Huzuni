@@ -22,8 +22,8 @@ public class PluginListEntry implements GuiListExtended.IGuiListEntry {
 
 	@Override
 	public void drawEntry(int slotIndex, int x, int y, int listWidth, int slotHeight, int mouseX, int mouseY, boolean mouseOver) {
-		Minecraft.getMinecraft().fontRenderer.drawString(TextFormatting.BOLD + pluginData.getName(), x + 2, y + 1, mouseOver ? 16777120 : 0xFFFFFF);
-		Minecraft.getMinecraft().fontRenderer.drawString("by " + pluginData.getAuthor(), x + 2, y + 12, mouseOver ? 16777120 : 0xFFFFFF);
+		Minecraft.getMinecraft().fontRendererObj.drawString(TextFormatting.BOLD + pluginData.getName(), x + 2, y + 1, mouseOver ? 16777120 : 0xFFFFFF);
+		Minecraft.getMinecraft().fontRendererObj.drawString("by " + pluginData.getAuthor(), x + 2, y + 12, mouseOver ? 16777120 : 0xFFFFFF);
 	}
 
 	@Override

@@ -39,10 +39,11 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 
 /**
- * Minecraft.java - Line 596, Line 2018, Line 2557
+ * Minecraft.java - Line 596, Line 2018, Line 2559
  * EntityRenderer.java - Line 1491
  * GuiIngame.java - Line 373
  * NetworkManager.java - Line 157, Line 183
+ * NetHandlerPlayClient.java - Line 317
  * */
 public enum Huzuni {
 	INSTANCE;

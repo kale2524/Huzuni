@@ -110,7 +110,7 @@ public abstract class Theme implements Nameable {
 		if (huzuni.settings.customFont.isEnabled())
 			huzuni.guiFontRenderer.drawString(text, x, y, color);
 		else
-			Minecraft.getMinecraft().fontRenderer.drawString(text, x, y + 2, color);
+			Minecraft.getMinecraft().fontRendererObj.drawString(text, x, y + 2, color);
 	}
 
 	/**
@@ -120,7 +120,7 @@ public abstract class Theme implements Nameable {
 		if (huzuni.settings.customFont.isEnabled())
 			huzuni.guiFontRenderer.drawStringWithShadow(text, x, y, color);
 		else
-			Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(text, x, y + 2, color);
+			Minecraft.getMinecraft().fontRendererObj.drawStringWithShadow(text, x, y + 2, color);
 	}
 	
 	/**
@@ -130,7 +130,7 @@ public abstract class Theme implements Nameable {
 		if (huzuni.settings.customFont.isEnabled())
 			return huzuni.guiFontRenderer.getStringWidth(text);
 		else
-			return Minecraft.getMinecraft().fontRenderer.getStringWidth(text);
+			return Minecraft.getMinecraft().fontRendererObj.getStringWidth(text);
 		
 	}
 	

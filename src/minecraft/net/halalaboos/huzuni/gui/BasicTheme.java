@@ -115,7 +115,7 @@ public class BasicTheme extends Theme {
     		GlStateManager.translate(0.0F, 0.0F, 32.0F);
         	Minecraft.getMinecraft().getRenderItem().zLevel = 200F;
         	Minecraft.getMinecraft().getRenderItem().renderItemAndEffectIntoGUI(itemStack, x, y);
-        	Minecraft.getMinecraft().getRenderItem().renderItemOverlayIntoGUI(Minecraft.getMinecraft().fontRenderer, itemStack, x, y, "");
+        	Minecraft.getMinecraft().getRenderItem().renderItemOverlayIntoGUI(Minecraft.getMinecraft().fontRendererObj, itemStack, x, y, "");
         	Minecraft.getMinecraft().getRenderItem().zLevel = 0F;
         } catch (Exception e) {
         	e.printStackTrace();

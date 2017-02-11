@@ -392,16 +392,16 @@ public class GuiHuzuniChat extends GuiNewChat {
     	if (huzuni.settings.customChat.isEnabled())
     		huzuni.chatFontRenderer.drawStringWithShadow(text, (int) x, (int) y - 3, color);
     	else
-    		mc.fontRenderer.drawStringWithShadow(text, x, y, color);
+    		mc.fontRendererObj.drawStringWithShadow(text, x, y, color);
     }
     
     private int getStringHeight() {
-    	return mc.fontRenderer.FONT_HEIGHT;
+    	return mc.fontRendererObj.FONT_HEIGHT;
     	// return huzuni.settings.customChat.isEnabled() ? huzuni.chatFontRenderer.getHeight() : mc.fontRendererObj.FONT_HEIGHT;
     }
     
     private int getStringWidth(String text) {
-    	return mc.fontRenderer.getStringWidth(text);
+    	return mc.fontRendererObj.getStringWidth(text);
     	// return huzuni.settings.customChat.isEnabled() ? huzuni.chatFontRenderer.getStringWidth(text) : mc.fontRendererObj.getStringWidth(text);
     }
     

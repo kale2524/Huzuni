@@ -33,14 +33,14 @@ public class AccountListEntry implements GuiListExtended.IGuiListEntry {
 				this.resourceLocation = AbstractClientPlayer.getLocationSkin(username);
 		        AbstractClientPlayer.getDownloadImageSkin(this.resourceLocation, username);
 			}
-			Minecraft.getMinecraft().fontRenderer.drawString(username, x + 34, y + 2, mouseOver ? 16777120 : 0xFFFFFFFF);
-			Minecraft.getMinecraft().fontRenderer.drawString(password.replaceAll(".", "*"), x + 34, y + 12, mouseOver ? 16777120 : 0xFFFFFFFF);
+			Minecraft.getMinecraft().fontRendererObj.drawString(username, x + 34, y + 2, mouseOver ? 16777120 : 0xFFFFFFFF);
+			Minecraft.getMinecraft().fontRendererObj.drawString(password.replaceAll(".", "*"), x + 34, y + 12, mouseOver ? 16777120 : 0xFFFFFFFF);
 			
 			Minecraft.getMinecraft().getTextureManager().bindTexture(resourceLocation);
 			GlStateManager.enableTexture2D();
 			RenderUtils.drawTextureRect(x, y, 32, 32, 8F / 64F, 8F / 64F, 16F / 64F, 16F / 64F);
 		} catch (Exception e) {
-			Minecraft.getMinecraft().fontRenderer.drawString("Parsing Error", x + 2, y + 2, 0xFFFF0000);
+			Minecraft.getMinecraft().fontRendererObj.drawString("Parsing Error", x + 2, y + 2, 0xFFFF0000);
 		}
 	}
 

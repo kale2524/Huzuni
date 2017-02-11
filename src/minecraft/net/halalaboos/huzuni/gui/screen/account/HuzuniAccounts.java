@@ -137,7 +137,7 @@ public class HuzuniAccounts extends HuzuniScreen implements GuiYesNoCallback {
 		this.drawDefaultBackground();
 		selectionList.drawScreen(mouseX, mouseY, partialTicks);
 		super.drawScreen(mouseX, mouseY, partialTicks);
-		this.drawCenteredString(fontRenderer, status, width / 2, 10, 0xFFFFFFFF);
+		this.drawCenteredString(fontRendererObj, status, width / 2, 10, 0xFFFFFFFF);
 		use.enabled = selectionList.hasSelected();
 		remove.enabled = selectionList.hasSelected();
         lastLogin.enabled = huzuni.settings.getLastSession() != null;

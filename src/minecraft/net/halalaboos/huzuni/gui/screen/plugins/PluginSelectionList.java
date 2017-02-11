@@ -21,7 +21,7 @@ public class PluginSelectionList extends GuiListExtended {
 		super(mc, width, height, top, bottom, itemSize);
 		this.pluginsScreen = pluginsScreen;
 		this.centerListVertically = false;
-        this.setHasListHeader(true, (int)((float) mc.fontRenderer.FONT_HEIGHT * 1.5F));
+        this.setHasListHeader(true, (int)((float) mc.fontRendererObj.FONT_HEIGHT * 1.5F));
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class PluginSelectionList extends GuiListExtended {
 	@Override
     protected void drawListHeader(int insideLeft, int insideTop, Tessellator tessellatorIn) {
         String text = TextFormatting.UNDERLINE + "Plugins";
-        this.mc.fontRenderer.drawString(text, this.width / 2 - this.mc.fontRenderer.getStringWidth(text) / 2, Math.min(this.top + 3, insideTop), 16777215);
+        this.mc.fontRendererObj.drawString(text, this.width / 2 - this.mc.fontRendererObj.getStringWidth(text) / 2, Math.min(this.top + 3, insideTop), 16777215);
     }
 
 	public void setPluginDatas(List<PluginData> pluginDatas) {

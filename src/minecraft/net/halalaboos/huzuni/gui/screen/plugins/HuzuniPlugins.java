@@ -81,7 +81,7 @@ public class HuzuniPlugins extends HuzuniScreen {
 		this.drawDefaultBackground();
 		selectionList.drawScreen(mouseX, mouseY, partialTicks);
 		super.drawScreen(mouseX, mouseY, partialTicks);
-		this.drawCenteredString(fontRenderer, "Plugins", width / 2, 10, 0xFFFFFFFF);
+		this.drawCenteredString(fontRendererObj, "Plugins", width / 2, 10, 0xFFFFFFFF);
 		load.enabled = selectionList.hasSelected();
 		
 		if (load.enabled) {
@@ -93,8 +93,8 @@ public class HuzuniPlugins extends HuzuniScreen {
 		}
 		
         if (selectionList.hasSelected()) {
-            this.fontRenderer.drawStringWithShadow("Version: " + selectionList.getSelected().getPluginData().getVersion(), 208, 40, 0xFFFFFF);
-        	this.fontRenderer.drawStringWithShadow("Description: " + selectionList.getSelected().getPluginData().getDescription(), 208, 50, 0xFFFFFF);
+            this.fontRendererObj.drawStringWithShadow("Version: " + selectionList.getSelected().getPluginData().getVersion(), 208, 40, 0xFFFFFF);
+        	this.fontRendererObj.drawStringWithShadow("Description: " + selectionList.getSelected().getPluginData().getDescription(), 208, 50, 0xFFFFFF);
         	renderContainer(208, 62, width - 208 - 12, height - 62 - 64);
         }
         

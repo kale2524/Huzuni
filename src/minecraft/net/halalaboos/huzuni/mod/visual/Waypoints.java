@@ -159,9 +159,9 @@ public class Waypoints extends Mod implements Renderer {
 					}
 					huzuni.guiFontRenderer.drawStringWithShadow(renderName, -width / 2, -2, 0xFFFFFF);
 				} else {
-					int width = mc.fontRenderer.getStringWidth(renderName);
+					int width = mc.fontRendererObj.getStringWidth(renderName);
 					if (renderIcon.isEnabled())
-						location.render(-16F, -16F - (mc.fontRenderer.FONT_HEIGHT) * 2F, 32, 32);
+						location.render(-16F, -16F - (mc.fontRendererObj.FONT_HEIGHT) * 2F, 32, 32);
 					
 					if (background.isEnabled()) {
 						GlStateManager.disableTexture2D();
@@ -170,7 +170,7 @@ public class Waypoints extends Mod implements Renderer {
 						GLManager.glColor(1F, 1F, 1F, opacity.getValue() / 100F);
 						GlStateManager.enableTexture2D();
 					}
-					mc.fontRenderer.drawStringWithShadow(renderName, -width / 2, 0, 0xFFFFFF);
+					mc.fontRendererObj.drawStringWithShadow(renderName, -width / 2, 0, 0xFFFFFF);
 			        GlStateManager.disableAlpha();
 				}
 				GlStateManager.disableTexture2D();
