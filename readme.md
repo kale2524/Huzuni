@@ -7,9 +7,9 @@ The version that's currently available isn't very stable either, some of the fea
 ## Versions/Downloads
 ### Please note that when I update major versions that I will only be working on that version, I will only update earlier versions for hotfixes, or issues. No new features will be implemented.
 
-| Huzuni Version | Minecraft Version |
-|----------------|-------------------|
-| 1.0.0          | 1.11.2            |
+| Huzuni Version | Minecraft Version(s) | Release Page                  | Download Link                 |
+|----------------|----------------------|-------------------------------|-------------------------------|
+| 1.0.0-beta1    | 1.11.2               | [Release Info](http://google) | [Download](http://google.com) |
 
 ## Donate
 Feel free to donate to help keep the updates coming (it does take time to update these clients and any donation helps). If you want to include your Minecraft IGN in the comments, when I do a custom cape (via [Capes API](http://capesapi.com)), I'll give it to you.
