@@ -11,7 +11,7 @@ The version that's currently available (Hal's 1.10.2) isn't very stable either, 
 | 1.0.0-beta1    | 1.11.2               | [Release Info](https://github.com/MatthewSH/minecraft-Huzuni/releases/tag/v1.0.0-beta1) | [Download](http://adf.ly/1jemlh) |
 
 ## Donate
-Feel free to donate to help keep the updates coming (it does take time to update these clients and any donation helps). If you want to include your Minecraft IGN in the comments, when I do a custom cape (via [Capes API](http://capesapi.com)), I'll give it to you.
+Feel free to donate to help keep the updates coming (it does take time to update these clients and any donation helps). If you want to include your Minecraft IGN in the comments, when I do a custom cape (via [Capes API](http://capesapi.com)), I'll give it to you. Please note, this is not a donation for the Huzuni code...it's a donation for CapesAPI and my contributions to the clients.
 
 [![Donate](http://i.imgur.com/CaOID2S.png)](https://ko-fi.com/A384KSB)
 
