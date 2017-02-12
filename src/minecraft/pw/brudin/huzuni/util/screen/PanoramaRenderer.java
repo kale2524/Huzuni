@@ -1,10 +1,9 @@
-package com.matthewhatcher.huzuni;
+package pw.brudin.huzuni.util.screen;
 
 import net.halalaboos.huzuni.api.util.Timer;
 import net.halalaboos.huzuni.api.util.render.GLManager;
 import net.halalaboos.huzuni.api.util.render.RenderUtils;
 import net.halalaboos.huzuni.render.ParticleEngine;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
@@ -13,46 +12,55 @@ import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
 
+import net.minecraft.util.math.MathHelper;
 import org.lwjgl.util.glu.Project;
 
+/**
+ * For now, this is just for rendering the SkyBox.
+ * It will be used for other things for the Menus, though. :>
+ *
+ * @author brudin
+ * @version 1.0
+ * @since 1/5/14
+ */
 public class PanoramaRenderer extends Gui {
-	private static final ResourceLocation[] titlePaths = new ResourceLocation[] {
-			new ResourceLocation("textures/gui/title/background/panorama_0.png"), 
-			new ResourceLocation("textures/gui/title/background/panorama_1.png"), 
-			new ResourceLocation("textures/gui/title/background/panorama_2.png"), 
-			new ResourceLocation("textures/gui/title/background/panorama_3.png"), 
-			new ResourceLocation("textures/gui/title/background/panorama_4.png"), 
-			new ResourceLocation("textures/gui/title/background/panorama_5.png")
-	};
-	
-	private int width, height, timer;
-	private DynamicTexture textureViewport;
-	private ResourceLocation textureBackground;
-	
-	private final ParticleEngine PARTICLE_ENGINE;
-	private final Timer TIMER;
-	private final Minecraft MINECRAFT = Minecraft.getMinecraft();
-	
-	public PanoramaRenderer(int width, int height) {
-		TIMER = new Timer();
-		PARTICLE_ENGINE = new ParticleEngine(false);
-		
-		this.width = width;
-		this.height = height;
-	}
-	
-	public void init() {
-		this.textureViewport = new DynamicTexture(256, 256);
-		this.textureBackground = MINECRAFT.getTextureManager().getDynamicTextureLocation("background", this.textureViewport);
-	}
-	
-	public void panoramaTick() {
-		timer++;
-		PARTICLE_ENGINE.updateParticles();
-	}
-	
+
+    private static final ResourceLocation[] titlePanoramaPaths = new ResourceLocation[] {new ResourceLocation("textures/gui/title/background/panorama_0.png"), new ResourceLocation("textures/gui/title/background/panorama_1.png"), new ResourceLocation("textures/gui/title/background/panorama_2.png"), new ResourceLocation("textures/gui/title/background/panorama_3.png"), new ResourceLocation("textures/gui/title/background/panorama_4.png"), new ResourceLocation("textures/gui/title/background/panorama_5.png")};
+    
+    private int width, height;
+    
+    private final Minecraft mc = Minecraft.getMinecraft();
+    
+    private int panoramaTimer;
+    
+    private ResourceLocation backgroundTexture;
+    
+    private DynamicTexture viewportTexture;
+    
+    private final ParticleEngine PARTICLE_ENGINE = new ParticleEngine(false);
+    
+    private final Timer timer = new Timer();
+    
+    public PanoramaRenderer(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+
+    public void init() {
+        this.viewportTexture = new DynamicTexture(256, 256);
+        this.backgroundTexture = this.mc.getTextureManager().getDynamicTextureLocation("background", this.viewportTexture);
+    }
+
+    public void panoramaTick() {
+        panoramaTimer++;
+        PARTICLE_ENGINE.updateParticles();
+    }
+
+
+	/**
+	 * Draws the main menu panorama
+	 */
 	private void drawPanorama(int mouseX, int mouseY, float partialTicks)
 	{
 		Tessellator tessellator = Tessellator.getInstance();
@@ -81,32 +89,39 @@ public class PanoramaRenderer extends Gui {
 			float f1 = ((float)(j / i) / (float)i - 0.5F) / 64.0F;
 			float f2 = 0.0F;
 			GlStateManager.translate(f, f1, f2);
-			GlStateManager.rotate(MathHelper.sin(((float)this.timer + partialTicks) / 400.0F) * 25.0F + 20.0F, 1.0F, 0.0F, 0.0F);
-			GlStateManager.rotate(-((float)this.timer + partialTicks) * 0.1F, 0.0F, 1.0F, 0.0F);
+			GlStateManager.rotate(MathHelper.sin(((float)this.panoramaTimer + partialTicks) / 400.0F) * 25.0F + 20.0F, 1.0F, 0.0F, 0.0F);
+			GlStateManager.rotate(-((float)this.panoramaTimer + partialTicks) * 0.1F, 0.0F, 1.0F, 0.0F);
 
 			for (int k = 0; k < 6; ++k)
 			{
 				GlStateManager.pushMatrix();
-				
-				switch(k) {
-					case 1:
-						GlStateManager.rotate(90.0F, 0.0F, 1.0F, 0.0F);
-						break;
-					case 2:
-						GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
-						break;
-					case 3:
-						GlStateManager.rotate(-90.0F, 0.0F, 1.0F, 0.0F);
-						break;
-					case 4:
-						GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
-						break;
-					case 5:
-						GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
-						break;
+
+				if (k == 1)
+				{
+					GlStateManager.rotate(90.0F, 0.0F, 1.0F, 0.0F);
 				}
 
-				MINECRAFT.getTextureManager().bindTexture(titlePaths[k]);
+				if (k == 2)
+				{
+					GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
+				}
+
+				if (k == 3)
+				{
+					GlStateManager.rotate(-90.0F, 0.0F, 1.0F, 0.0F);
+				}
+
+				if (k == 4)
+				{
+					GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
+				}
+
+				if (k == 5)
+				{
+					GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
+				}
+
+				this.mc.getTextureManager().bindTexture(titlePanoramaPaths[k]);
 				vertexbuffer.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
 				int l = 255 / (j + 1);
 				float f3 = 0.0F;
@@ -132,10 +147,13 @@ public class PanoramaRenderer extends Gui {
 		GlStateManager.enableCull();
 		GlStateManager.enableDepth();
 	}
-	
+
+	/**
+	 * Rotate and blurs the skybox view in the main menu
+	 */
 	private void rotateAndBlurSkybox(float partialTicks)
 	{
-		MINECRAFT.getTextureManager().bindTexture(this.textureBackground);
+		this.mc.getTextureManager().bindTexture(this.backgroundTexture);
 		GlStateManager.glTexParameteri(3553, 10241, 9729);
 		GlStateManager.glTexParameteri(3553, 10240, 9729);
 		GlStateManager.glCopyTexSubImage2D(3553, 0, 0, 0, 0, 0, 256, 256);
@@ -164,9 +182,12 @@ public class PanoramaRenderer extends Gui {
 		GlStateManager.enableAlpha();
 		GlStateManager.colorMask(true, true, true, true);
 	}
-	
+
+	/**
+	 * Renders the skybox in the main menu
+	 */
 	public void renderSkybox(int mouseX, int mouseY, float partialTicks) {
-		MINECRAFT.getFramebuffer().unbindFramebuffer();
+		this.mc.getFramebuffer().unbindFramebuffer();
 		GlStateManager.viewport(0, 0, 256, 256);
 		this.drawPanorama(mouseX, mouseY, partialTicks);
 		this.rotateAndBlurSkybox(partialTicks);
@@ -176,8 +197,8 @@ public class PanoramaRenderer extends Gui {
 		this.rotateAndBlurSkybox(partialTicks);
 		this.rotateAndBlurSkybox(partialTicks);
 		this.rotateAndBlurSkybox(partialTicks);
-		MINECRAFT.getFramebuffer().bindFramebuffer(true);
-		GlStateManager.viewport(0, 0, MINECRAFT.displayWidth, MINECRAFT.displayHeight);
+		this.mc.getFramebuffer().bindFramebuffer(true);
+		GlStateManager.viewport(0, 0, this.mc.displayWidth, this.mc.displayHeight);
 		float f = this.width > this.height ? 120.0F / (float)this.width : 120.0F / (float)this.height;
 		float f1 = (float)this.height * f / 256.0F;
 		float f2 = (float)this.width * f / 256.0F;
@@ -194,9 +215,9 @@ public class PanoramaRenderer extends Gui {
 		GLManager.glColor(0x6F000000);
 		RenderUtils.drawRect(0, 0, width, height);
 		PARTICLE_ENGINE.render();
-		if (TIMER.hasReach(15)) {
+		if (timer.hasReach(15)) {
 			PARTICLE_ENGINE.spawnParticles(0, 0, width, height, 55F, 15F);
-			TIMER.reset();
+			timer.reset();
 		}
 	}
 	

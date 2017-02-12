@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-import com.matthewhatcher.huzuni.PanoramaRenderer;
-
 import net.halalaboos.huzuni.Huzuni;
 import net.halalaboos.huzuni.api.util.render.Texture;
 import net.halalaboos.huzuni.gui.screen.account.HuzuniAccounts;
@@ -14,6 +12,7 @@ import net.halalaboos.huzuni.gui.screen.plugins.HuzuniPlugins;
 import net.minecraft.client.gui.*;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
+import pw.brudin.huzuni.util.screen.PanoramaRenderer;
 
 public class HuzuniMainMenu extends HuzuniScreen {
 	
