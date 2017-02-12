@@ -11,21 +11,19 @@ import net.halalaboos.huzuni.api.util.FileUtils;
 public final class HuzuniUpdater extends Thread {
 
 	private final Huzuni huzuni;
+	private String version;
 	
 	public HuzuniUpdater(Huzuni huzuni) {
 		this.huzuni = huzuni;
+		version = Huzuni.VERSION.split(" ")[1];
 	}
 	
 	@Override
 	public void run() {
-		// TODO: Update this.
-		/*String version = "";
-		try {
-			//version = FileUtils.readURL(new URL("http://halalaboos.net/huzuni/version"));
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
+		if(version.contains("beta") || version.contains("alpha")) {
+			huzuni.settings.setNewestVersion(Huzuni.VERSION);
+			Huzuni.LOGGER.info("You're using a beta version, we won't display updates.");
+			return;
 		}
-		huzuni.settings.setNewestVersion(version);*/
 	}
-	
 }
