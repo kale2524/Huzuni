@@ -7,6 +7,8 @@ import net.halalaboos.huzuni.api.task.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.matthewhatcher.huzuni.mods.visual.HuzuniESP;
+
 import net.halalaboos.huzuni.api.event.EventManager;
 import net.halalaboos.huzuni.meme.MemeManager;
 import net.halalaboos.huzuni.api.mod.CommandManager;
@@ -39,7 +41,7 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 
 /**
- * Minecraft.java - Line 596, Line 2018, Line 2559
+ * Minecraft.java - Line 596, Line 2018, Line 2365, Line 2559
  * EntityRenderer.java - Line 1491
  * GuiIngame.java - Line 373
  * NetworkManager.java - Line 157, Line 183
@@ -187,11 +189,11 @@ public enum Huzuni {
 		modManager.addMod(new Autofarm());
 		modManager.addMod(new Smasher());
 		modManager.addMod(new Replica());
-		modManager.addMod(new ESP());
+		modManager.addMod(new HuzuniESP());
 		modManager.addMod(Nametags.INSTANCE);
 		modManager.addMod(new StorageESP());
 		modManager.addMod(new Projectiles());
-		modManager.addMod(Xray.INSTANCE);
+		//modManager.addMod(Xray.INSTANCE);
 		modManager.addMod(new Antiknockback());
 		modManager.addMod(new Speed());
 		modManager.addMod(new Scaffold());
