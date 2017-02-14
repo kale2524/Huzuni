@@ -12,9 +12,10 @@ public class TitleWidget extends BackgroundWidget {
 	@Override
 	public void renderMenu(int x, int y, int width, int height) {
 		super.renderMenu(x, y, width, height);
-		theme.drawStringWithShadow(Huzuni.VERSION, x, y, 0xFFFFFF);
-		this.setWidth(theme.getStringWidth(Huzuni.VERSION) + 2);
-		this.setHeight(theme.getStringHeight(Huzuni.VERSION));
+		String huzuniVersion = "Huzuni " + Huzuni.VERSION;
+		theme.drawStringWithShadow(huzuniVersion, x, y, 0xFFFFFF);
+		this.setWidth(theme.getStringWidth(huzuniVersion) + 2);
+		this.setHeight(theme.getStringHeight(huzuniVersion));
 	}
 
 }

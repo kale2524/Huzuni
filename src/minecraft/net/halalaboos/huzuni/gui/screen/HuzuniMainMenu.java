@@ -109,7 +109,8 @@ public class HuzuniMainMenu extends HuzuniScreen {
 		float titleX = width / 2 - 150, titleY = 20;
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		TITLE.render(titleX, titleY + 10, 300, 100);
-        this.drawString(fontRendererObj, Huzuni.VERSION, width - fontRendererObj.getStringWidth(Huzuni.VERSION) - 2, height - 12, 0xFFFFFF);
+		String huzuniVersion = "Huzuni " + Huzuni.VERSION;
+        this.drawString(fontRendererObj, huzuniVersion, width - fontRendererObj.getStringWidth(huzuniVersion) - 2, height - 12, 0xFFFFFF);
         if (huzuni.settings.hasUpdate())
             this.drawCenteredString(fontRendererObj, "New version available!", width / 2, height / 4 + 142, 0xFFFFFF);
 	}
